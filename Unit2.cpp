@@ -54,6 +54,12 @@ void __fastcall TForm2::Memo1KeyPress(TObject *Sender, char &Key)
 void __fastcall TForm2::Image3Click(TObject *Sender)
 {
         Form2->Close();
+        Edit1->Clear();
+        Edit2->Clear();
+        Edit3->Clear();
+        Edit4->Clear();
+        Edit5->Clear();
+        Memo1->Clear();
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm2::Edit1KeyPress(TObject *Sender, char &Key)
@@ -149,5 +155,35 @@ void __fastcall TForm2::Image2Click(TObject *Sender)
         }else{
                 MessageDlg("Ingrese la cedula del conductor", mtInformation, TMsgDlgButtons() << mbOK, 0);
         }
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm2::Edit2Enter(TObject *Sender)
+{
+        String cadena="",cadena2="";
+        int total=0;
+        cadena2=FormatFloat("##,###,###",Edit1->Text.ToDouble());
+        cadena="SELECT count(*) as total FROM conductores where cedulaconductor='"+cadena2+"'";
+        Query1->Close();
+        Query1->SQL->Clear();
+        Query1->SQL->Add(cadena);
+        Query1->Active=true;
+        total=Query1->FieldByName("total")->Value;
+        if(total>0){
+                cadena="SELECT * FROM conductores where cedulaconductor='"+cadena2+"'";
+                Query1->Close();
+                Query1->SQL->Clear();
+                Query1->SQL->Add(cadena);
+                Query1->Active=true;
+                Image2->Visible=false;
+                Image5->Visible=true;
+                Edit1->Text=Query1->FieldByName("cedulaconductor")->Value;
+                Edit2->Text=Query1->FieldByName("nombreconductor")->Value;
+                Edit3->Text=Query1->FieldByName("cedulapropietario")->Value;
+                Edit4->Text=Query1->FieldByName("nombrepropietario")->Value;
+                Edit5->Text=Query1->FieldByName("telefono")->Value;
+                Memo1->Lines->Add(Query1->FieldByName("direccionpropietario")->Value);
+
+        }
+
 }
 //---------------------------------------------------------------------------

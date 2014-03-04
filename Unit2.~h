@@ -46,6 +46,7 @@ __published:	// IDE-managed Components
         void __fastcall Edit5KeyPress(TObject *Sender, char &Key);
         void __fastcall Image4Click(TObject *Sender);
         void __fastcall Image2Click(TObject *Sender);
+        void __fastcall Edit2Enter(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
         String codigo[100];

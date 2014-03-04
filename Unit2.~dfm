@@ -2927,6 +2927,7 @@ object Form2: TForm2
         Width = 310
         Height = 26
         TabOrder = 1
+        OnEnter = Edit2Enter
         OnKeyPress = Edit2KeyPress
       end
       object Edit3: TEdit
@@ -2974,6 +2975,7 @@ object Form2: TForm2
     end
   end
   object Query1: TQuery
+    DatabaseName = 'base'
     Left = 128
     Top = 40
   end

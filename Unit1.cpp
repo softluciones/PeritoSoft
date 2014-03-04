@@ -53,19 +53,12 @@ void __fastcall TForm1::rellenar(){
         totalreparar=i;
         totalcambiar=j;
 }
-//--------------Agregar Conductor'---------------------------
+//--------------Agregar Conductor'-------------------------------------------
 void __fastcall TForm1::Image1Click(TObject *Sender)
 {
-
-        //Form1->Visible=false;
-
         Form2->ShowModal();
 }
 //---------------------------------------------------------------------------
-
-
-
-
 void __fastcall TForm1::Image4Click(TObject *Sender)
 {
        if(activado==2){
