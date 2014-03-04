@@ -2852,7 +2852,7 @@ object Form2: TForm2
     object Image5: TImage
       Left = 73
       Top = 1
-      Width = 72
+      Width = 64
       Height = 62
       Align = alLeft
       Picture.Data = {
@@ -3512,6 +3512,7 @@ object Form2: TForm2
         A7F5AED575C9445CFFD9}
       Stretch = True
       Visible = False
+      OnClick = Image5Click
     end
   end
   object Panel3: TPanel
@@ -3591,6 +3592,7 @@ object Form2: TForm2
         Width = 310
         Height = 26
         TabOrder = 1
+        OnClick = Edit2Click
         OnEnter = Edit2Enter
         OnKeyPress = Edit2KeyPress
       end

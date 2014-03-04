@@ -60,6 +60,8 @@ void __fastcall TForm2::Image3Click(TObject *Sender)
         Edit4->Clear();
         Edit5->Clear();
         Memo1->Clear();
+        Image2->Visible=true;
+        Image5->Visible=false;
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm2::Edit1KeyPress(TObject *Sender, char &Key)
@@ -161,29 +163,64 @@ void __fastcall TForm2::Edit2Enter(TObject *Sender)
 {
         String cadena="",cadena2="";
         int total=0;
-        cadena2=FormatFloat("##,###,###",Edit1->Text.ToDouble());
-        cadena="SELECT count(*) as total FROM conductores where cedulaconductor='"+cadena2+"'";
-        Query1->Close();
-        Query1->SQL->Clear();
-        Query1->SQL->Add(cadena);
-        Query1->Active=true;
-        total=Query1->FieldByName("total")->Value;
-        if(total>0){
-                cadena="SELECT * FROM conductores where cedulaconductor='"+cadena2+"'";
+        if(!Edit1->Text.IsEmpty()&&ban==0){
+                cadena2=FormatFloat("##,###,###",Edit1->Text.ToDouble());
+                cadena="SELECT count(*) as total FROM conductores where cedulaconductor='"+cadena2+"'";
                 Query1->Close();
                 Query1->SQL->Clear();
                 Query1->SQL->Add(cadena);
                 Query1->Active=true;
-                Image2->Visible=false;
-                Image5->Visible=true;
-                Edit1->Text=Query1->FieldByName("cedulaconductor")->Value;
-                Edit2->Text=Query1->FieldByName("nombreconductor")->Value;
-                Edit3->Text=Query1->FieldByName("cedulapropietario")->Value;
-                Edit4->Text=Query1->FieldByName("nombrepropietario")->Value;
-                Edit5->Text=Query1->FieldByName("telefono")->Value;
-                Memo1->Lines->Add(Query1->FieldByName("direccionpropietario")->Value);
-
+                total=Query1->FieldByName("total")->Value;
+                if(total>0){
+                        cadena="SELECT * FROM conductores where cedulaconductor='"+cadena2+"'";
+                        Query1->Close();
+                        Query1->SQL->Clear();
+                        Query1->SQL->Add(cadena);
+                        Query1->Active=true;
+                        Image2->Visible=false;
+                        Image5->Visible=true;
+                        Edit1->Text=Query1->FieldByName("cedulaconductor")->Value;
+                        Edit2->Text=Query1->FieldByName("nombreconductor")->Value;
+                        Edit3->Text=Query1->FieldByName("cedulapropietario")->Value;
+                        Edit4->Text=Query1->FieldByName("nombrepropietario")->Value;
+                        Edit5->Text=Query1->FieldByName("telefono")->Value;
+                        Memo1->Lines->Add(Query1->FieldByName("direccionpropietario")->Value);
+                }
+                ban=1;
         }
-
 }
 //---------------------------------------------------------------------------
+void __fastcall TForm2::Edit2Click(TObject *Sender)
+{
+        Edit2Enter(Sender);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm2::Image5Click(TObject *Sender)
+{
+        String cadena;
+        cadena="SELECT * FROM conductores WHERE cedulaconductor='"+Edit1->Text+"'";
+        Form1->activado=1;
+        Query1->Close();
+        Query1->SQL->Clear();
+        Query1->SQL->Add(cadena);
+        Query1->Active=true;
+        Image2->Visible=true;
+        Image5->Visible=false;
+        Form1->Label5->Caption=Edit2->Text;//nombre conductor
+        Form1->Label7->Caption=Edit1->Text;//cedula conductor
+        Form1->Label9->Caption=Edit4->Text;//nombre propietario
+        Form1->Label11->Caption=Edit3->Text;//cedula propietario
+        Form1->Label13->Caption=Edit5->Text;//telefono
+        Form1->Label15->Caption=Memo1->Text;//dirección
+        Form1->Label17->Caption=Query1->FieldByName("id")->Value;//id
+        Edit1->Clear();
+        Edit2->Clear();
+        Edit3->Clear();
+        Edit4->Clear();
+        Edit5->Clear();
+        Memo1->Clear();
+        Form2->Close();
+}
+//---------------------------------------------------------------------------
+
