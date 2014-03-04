@@ -58,6 +58,8 @@ void __fastcall TForm1::Image1Click(TObject *Sender)
 {
         Form2->ShowModal();
         Form2->ban=0;
+        Form2->ban1=0;
+
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm1::Image4Click(TObject *Sender)

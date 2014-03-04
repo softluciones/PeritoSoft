@@ -14,6 +14,10 @@ TForm2 *Form2;
 __fastcall TForm2::TForm2(TComponent* Owner)
         : TForm(Owner)
 {
+        formular();
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm2::formular(){
         codigo[0]="0414";
         codigo[1]="0424";
         codigo[2]="0416";
@@ -24,8 +28,6 @@ __fastcall TForm2::TForm2(TComponent* Owner)
                 ComboBox1->Items->Add(codigo[i]);
         }
 }
-//---------------------------------------------------------------------------
-
 
 
 void __fastcall TForm2::Edit2KeyPress(TObject *Sender, char &Key)
@@ -72,8 +74,42 @@ void __fastcall TForm2::Edit1KeyPress(TObject *Sender, char &Key)
 //---------------------------------------------------------------------------
 void __fastcall TForm2::Edit3KeyPress(TObject *Sender, char &Key)
 {
+        String cadena;
+        int total=0;
         if(!isdigit(Key)&&Key!=8)
                 Key=NULL;
+        else{
+                if(Key==8){
+                        Edit3->Text="";
+                        Edit4->Text="";
+                        Edit5->Text="";
+                        Memo1->Text="";
+                        Image2->Visible=true;
+                        Image5->Visible=false;
+                        total=Edit1->Text.Length();
+                        if(total==10){
+                                cadena=Edit1->Text.c_str()[0];
+                                cadena+=Edit1->Text.c_str()[1];
+                                cadena+=Edit1->Text.c_str()[3];
+                                cadena+=Edit1->Text.c_str()[4];
+                                cadena+=Edit1->Text.c_str()[5];
+                                cadena+=Edit1->Text.c_str()[7];
+                                cadena+=Edit1->Text.c_str()[8];
+                                cadena+=Edit1->Text.c_str()[9];
+                                Edit1->Text=cadena;
+                        }else{
+                                cadena=Edit1->Text.c_str()[0];
+                                cadena+=Edit1->Text.c_str()[2];
+                                cadena+=Edit1->Text.c_str()[3];
+                                cadena+=Edit1->Text.c_str()[4];
+                                cadena+=Edit1->Text.c_str()[6];
+                                cadena+=Edit1->Text.c_str()[7];
+                                cadena+=Edit1->Text.c_str()[8];
+                                Edit1->Text=cadena;
+                        }
+
+                }
+        }
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm2::Edit5KeyPress(TObject *Sender, char &Key)
@@ -90,7 +126,7 @@ void __fastcall TForm2::Image4Click(TObject *Sender)
                    "Ejemplo Nombre Conductor: Carlos Perez (solo letras)\n\n"
                    "Ejemplo Telefono Propietario: 04141234567 (Solo numeros)\n\n"
                    "Ejemplo Dirección: Urb Merida 100-24 (Texto y numeros)\n\n"
-                   "Los datos se ingresan así y automáticamente adquieren formato una vez guardado", mtInformation, TMsgDlgButtons() << mbOK, 0);        
+                   "Los datos se ingresan así y automáticamente adquieren formato una vez guardado", mtInformation, TMsgDlgButtons() << mbOK, 0);
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm2::Image2Click(TObject *Sender)
@@ -161,7 +197,7 @@ void __fastcall TForm2::Image2Click(TObject *Sender)
 //---------------------------------------------------------------------------
 void __fastcall TForm2::Edit2Enter(TObject *Sender)
 {
-        String cadena="",cadena2="";
+        String cadena="",cadena2="",x;
         int total=0;
         if(!Edit1->Text.IsEmpty()&&ban==0){
                 cadena2=FormatFloat("##,###,###",Edit1->Text.ToDouble());
@@ -179,14 +215,36 @@ void __fastcall TForm2::Edit2Enter(TObject *Sender)
                         Query1->Active=true;
                         Image2->Visible=false;
                         Image5->Visible=true;
+                        Query1->First();
+
                         Edit1->Text=Query1->FieldByName("cedulaconductor")->Value;
                         Edit2->Text=Query1->FieldByName("nombreconductor")->Value;
                         Edit3->Text=Query1->FieldByName("cedulapropietario")->Value;
                         Edit4->Text=Query1->FieldByName("nombrepropietario")->Value;
                         Edit5->Text=Query1->FieldByName("telefono")->Value;
+                        cadena=Edit5->Text.c_str()[0];
+                        cadena+=Edit5->Text.c_str()[1];
+                        cadena+=Edit5->Text.c_str()[2];
+                        cadena+=Edit5->Text.c_str()[3];
+                        x=Edit5->Text.c_str()[5];
+                        x+=Edit5->Text.c_str()[6];
+                        x+=Edit5->Text.c_str()[7];
+                        x+=Edit5->Text.c_str()[8];
+                        x+=Edit5->Text.c_str()[9];
+                        x+=Edit5->Text.c_str()[10];
+                        x+=Edit5->Text.c_str()[11];
+
+                        for(int i=0;i<codigo->Length();i++){
+                                if(cadena==codigo[i]){
+                                        ComboBox1->ItemIndex=i;
+                                        Edit5->Text=x;
+                                        break;
+                                }
+                        }
                         Memo1->Lines->Add(Query1->FieldByName("direccionpropietario")->Value);
+                        ban=1;
                 }
-                ban=1;
+
         }
 }
 //---------------------------------------------------------------------------
@@ -224,3 +282,58 @@ void __fastcall TForm2::Image5Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TForm2::Edit4Enter(TObject *Sender)
+{
+        String cadena="",cadena2="",cadena22="";
+        String x;
+        int total=0;
+        cadena22=Edit3->Text;
+        if(!Edit3->Text.IsEmpty()&&ban1==0){
+                cadena2=FormatFloat("##,###,###",Edit3->Text.ToDouble());
+                cadena="SELECT count(*) as total FROM conductores where cedulapropietario='"+cadena2+"'";
+                Query1->Close();
+                Query1->SQL->Clear();
+                Query1->SQL->Add(cadena);
+                Query1->Active=true;
+                total=Query1->FieldByName("total")->Value;
+                if(total>0){
+                        cadena="SELECT * FROM conductores where cedulapropietario='"+cadena2+"'";
+                        Query1->Close();
+                        Query1->SQL->Clear();
+                        Query1->SQL->Add(cadena);
+                        Query1->Active=true;
+                        if(ban==1){
+                                Image2->Visible=false;
+                                Image5->Visible=true;
+                        }
+                        Query1->First();
+                        Edit4->Text=Query1->FieldByName("nombrepropietario")->Value;
+                        Edit5->Text=Query1->FieldByName("telefono")->Value;
+                        cadena=Edit5->Text.c_str()[0];
+                        cadena+=Edit5->Text.c_str()[1];
+                        cadena+=Edit5->Text.c_str()[2];
+                        cadena+=Edit5->Text.c_str()[3];
+                        x=Edit5->Text.c_str()[5];
+                        x+=Edit5->Text.c_str()[6];
+                        x+=Edit5->Text.c_str()[7];
+                        x+=Edit5->Text.c_str()[8];
+                        x+=Edit5->Text.c_str()[9];
+                        x+=Edit5->Text.c_str()[10];
+                        x+=Edit5->Text.c_str()[11];
+                        for(int i=0;i<codigo->Length();i++){
+                                if(cadena==codigo[i]){
+                                        ComboBox1->ItemIndex=i;
+                                        Edit5->Text=x;
+                                        break;
+                                }
+                        }
+                        Memo1->Lines->Add(Query1->FieldByName("direccionpropietario")->Value);
+                        ban1=1;
+                }
+        }
+
+        if(cadena22==Edit1->Text){
+                Edit4->Text=Edit2->Text;
+        }
+}
+//---------------------------------------------------------------------------

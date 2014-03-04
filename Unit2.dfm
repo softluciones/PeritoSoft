@@ -1,6 +1,6 @@
 object Form2: TForm2
-  Left = 287
-  Top = 148
+  Left = 311
+  Top = 143
   BorderStyle = bsNone
   Caption = 'Form2'
   ClientHeight = 395
@@ -712,8 +712,9 @@ object Form2: TForm2
     object Image2: TImage
       Left = 1
       Top = 1
-      Width = 72
+      Width = 64
       Height = 62
+      Cursor = crHandPoint
       Align = alLeft
       Picture.Data = {
         0A544A504547496D61676530590000FFD8FFE000104A46494600010101004800
@@ -1434,10 +1435,11 @@ object Form2: TForm2
       OnClick = Image2Click
     end
     object Image3: TImage
-      Left = 462
+      Left = 472
       Top = 1
-      Width = 76
+      Width = 66
       Height = 62
+      Cursor = crHandPoint
       Align = alRight
       Picture.Data = {
         0A544A504547496D616765BC5E0000FFD8FFE000104A46494600010101004800
@@ -2203,10 +2205,11 @@ object Form2: TForm2
       OnClick = Image3Click
     end
     object Image4: TImage
-      Left = 390
+      Left = 410
       Top = 1
-      Width = 72
+      Width = 62
       Height = 62
+      Cursor = crHandPoint
       Align = alRight
       Picture.Data = {
         0A544A504547496D616765784F0000FFD8FFE000104A46494600010101004800
@@ -2850,10 +2853,11 @@ object Form2: TForm2
       OnClick = Image4Click
     end
     object Image5: TImage
-      Left = 73
+      Left = 65
       Top = 1
       Width = 64
       Height = 62
+      Cursor = crHandPoint
       Align = alLeft
       Picture.Data = {
         0A544A504547496D6167659B510000FFD8FFE000104A46494600010101004800
@@ -3610,6 +3614,7 @@ object Form2: TForm2
         Width = 308
         Height = 26
         TabOrder = 3
+        OnEnter = Edit4Enter
         OnKeyPress = Edit4KeyPress
       end
       object Edit5: TEdit
@@ -3632,11 +3637,11 @@ object Form2: TForm2
       object ComboBox1: TComboBox
         Left = 8
         Top = 154
-        Width = 81
+        Width = 85
         Height = 26
         ItemHeight = 18
         TabOrder = 6
-        Text = 'codigo'
+        Text = 'Codigo'
       end
     end
   end

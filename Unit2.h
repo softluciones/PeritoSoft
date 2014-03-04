@@ -50,11 +50,14 @@ __published:	// IDE-managed Components
         void __fastcall Edit2Enter(TObject *Sender);
         void __fastcall Edit2Click(TObject *Sender);
         void __fastcall Image5Click(TObject *Sender);
+        void __fastcall Edit4Enter(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
         String codigo[100];
-        int ban;
+        int ban,ban1,prueba;
+
         __fastcall TForm2(TComponent* Owner);
+        void __fastcall formular();
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TForm2 *Form2;
