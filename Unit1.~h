@@ -88,6 +88,7 @@ public:		// User declarations
         String reparar[30000];
         int idreparar[30000],totalreparar;
         String cambiar[30000];
+        int activado;
         int idcambiar[30000],totalcambiar;
         __fastcall TForm1(TComponent* Owner);
 void __fastcall rellenar();
