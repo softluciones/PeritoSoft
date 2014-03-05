@@ -35,7 +35,7 @@ void __fastcall TForm9::Image2Click(TObject *Sender)
                 MessageDlg("Agregado con Éxito", mtInformation, TMsgDlgButtons() << mbOK, 0);
                 Edit1->Clear();
                 Form9->Close();
-                Form4->tipo();
+                Form4->seguro();
         }else{
                 MessageDlg("No ha ingresado Seguro del Auto", mtInformation, TMsgDlgButtons() << mbOK, 0);
         }

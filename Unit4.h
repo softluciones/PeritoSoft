@@ -50,9 +50,7 @@ __published:	// IDE-managed Components
         TEdit *Edit5;
         TLabel *Label10;
         TQuery *Query1;
-        TQuery *Query2;
-        TQuery *Query3;
-        TQuery *Query4;
+        TLabel *Label11;
         void __fastcall Image3Click(TObject *Sender);
         void __fastcall Image5Click(TObject *Sender);
         void __fastcall Image6Click(TObject *Sender);
@@ -65,9 +63,10 @@ __published:	// IDE-managed Components
         void __fastcall Edit3KeyPress(TObject *Sender, char &Key);
         void __fastcall Edit4KeyPress(TObject *Sender, char &Key);
         void __fastcall Edit5KeyPress(TObject *Sender, char &Key);
+        void __fastcall Image2Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
-        String Marca[400][2],Modelo[50000][2],Tipo[50000][2],Colorete[50000][2],Seguro[50000][2];
+        AnsiString Marca[400][2],Modelo[50000][2],Tipo[50000][2],Colorete[50000][2],Seguro[50000][2];
         int MARCA,MODELO,TIPO,COLOR,SEGURO;
         __fastcall TForm4(TComponent* Owner);
         void __fastcall marca();

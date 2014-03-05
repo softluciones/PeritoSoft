@@ -2879,6 +2879,7 @@ object Form9: TForm9
     end
   end
   object Query1: TQuery
+    DatabaseName = 'base'
     Left = 88
     Top = 32
   end

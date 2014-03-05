@@ -74,6 +74,8 @@ void __fastcall TForm2::Edit1KeyPress(TObject *Sender, char &Key)
 //---------------------------------------------------------------------------
 void __fastcall TForm2::Edit3KeyPress(TObject *Sender, char &Key)
 {
+        String cadena;
+        int total=0;
         if(!isdigit(Key)&&Key!=8)
                 Key=NULL;
         else{
@@ -84,6 +86,28 @@ void __fastcall TForm2::Edit3KeyPress(TObject *Sender, char &Key)
                         Memo1->Text="";
                         Image2->Visible=true;
                         Image5->Visible=false;
+                        total=Edit1->Text.Length();
+                        if(total==10){
+                                cadena=Edit1->Text.c_str()[0];
+                                cadena+=Edit1->Text.c_str()[1];
+                                cadena+=Edit1->Text.c_str()[3];
+                                cadena+=Edit1->Text.c_str()[4];
+                                cadena+=Edit1->Text.c_str()[5];
+                                cadena+=Edit1->Text.c_str()[7];
+                                cadena+=Edit1->Text.c_str()[8];
+                                cadena+=Edit1->Text.c_str()[9];
+                                Edit1->Text=cadena;
+                        }else{
+                                cadena=Edit1->Text.c_str()[0];
+                                cadena+=Edit1->Text.c_str()[2];
+                                cadena+=Edit1->Text.c_str()[3];
+                                cadena+=Edit1->Text.c_str()[4];
+                                cadena+=Edit1->Text.c_str()[6];
+                                cadena+=Edit1->Text.c_str()[7];
+                                cadena+=Edit1->Text.c_str()[8];
+                                Edit1->Text=cadena;
+                        }
+
                 }
         }
 }
@@ -260,11 +284,12 @@ void __fastcall TForm2::Image5Click(TObject *Sender)
 
 void __fastcall TForm2::Edit4Enter(TObject *Sender)
 {
-        String cadena="",cadena2="";
+        String cadena="",cadena2="",cadena22="";
         String x;
         int total=0;
-        cadena2=FormatFloat("##,###,###",Edit3->Text.ToDouble());
+        cadena22=Edit3->Text;
         if(!Edit3->Text.IsEmpty()&&ban1==0){
+                cadena2=FormatFloat("##,###,###",Edit3->Text.ToDouble());
                 cadena="SELECT count(*) as total FROM conductores where cedulapropietario='"+cadena2+"'";
                 Query1->Close();
                 Query1->SQL->Clear();
@@ -307,7 +332,7 @@ void __fastcall TForm2::Edit4Enter(TObject *Sender)
                 }
         }
 
-        if(cadena2==Edit1->Text){
+        if(cadena22==Edit1->Text){
                 Edit4->Text=Edit2->Text;
         }
 }

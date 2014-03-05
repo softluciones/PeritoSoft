@@ -1,5 +1,5 @@
 object Form1: TForm1
-  Left = 188
+  Left = 525
   Top = 121
   AutoScroll = False
   Caption = 'Asociaci'#243'n de Peritos Avaluadores Software'
@@ -4662,15 +4662,15 @@ object Form1: TForm1
       ParentFont = False
       TabOrder = 1
       object Label4: TLabel
-        Left = 8
-        Top = 36
+        Left = 5
+        Top = 27
         Width = 125
         Height = 13
         Caption = 'Nombre Conductor:'
       end
       object Label5: TLabel
-        Left = 137
-        Top = 36
+        Left = 134
+        Top = 27
         Width = 4
         Height = 13
         Font.Charset = ANSI_CHARSET
@@ -4681,15 +4681,15 @@ object Form1: TForm1
         ParentFont = False
       end
       object Label6: TLabel
-        Left = 8
-        Top = 52
+        Left = 5
+        Top = 43
         Width = 118
         Height = 13
         Caption = 'Cedula Conductor:'
       end
       object Label7: TLabel
-        Left = 136
-        Top = 52
+        Left = 133
+        Top = 43
         Width = 4
         Height = 13
         Font.Charset = ANSI_CHARSET
@@ -4700,15 +4700,15 @@ object Form1: TForm1
         ParentFont = False
       end
       object Label8: TLabel
-        Left = 8
-        Top = 68
+        Left = 5
+        Top = 59
         Width = 132
         Height = 13
         Caption = 'Nombre Propietario:'
       end
       object Label9: TLabel
-        Left = 143
-        Top = 68
+        Left = 140
+        Top = 59
         Width = 4
         Height = 13
         Font.Charset = ANSI_CHARSET
@@ -4719,15 +4719,15 @@ object Form1: TForm1
         ParentFont = False
       end
       object Label10: TLabel
-        Left = 8
-        Top = 84
+        Left = 5
+        Top = 75
         Width = 125
         Height = 13
         Caption = 'Cedula Propietario:'
       end
       object Label11: TLabel
-        Left = 136
-        Top = 84
+        Left = 133
+        Top = 75
         Width = 4
         Height = 13
         Font.Charset = ANSI_CHARSET
@@ -4738,15 +4738,15 @@ object Form1: TForm1
         ParentFont = False
       end
       object Label12: TLabel
-        Left = 8
-        Top = 99
+        Left = 5
+        Top = 90
         Width = 65
         Height = 13
         Caption = 'Tel'#233'fono: '
       end
       object Label13: TLabel
-        Left = 72
-        Top = 100
+        Left = 69
+        Top = 91
         Width = 4
         Height = 13
         Font.Charset = ANSI_CHARSET
@@ -4757,15 +4757,15 @@ object Form1: TForm1
         ParentFont = False
       end
       object Label14: TLabel
-        Left = 7
-        Top = 116
+        Left = 4
+        Top = 107
         Width = 137
         Height = 13
         Caption = 'Direcci'#243'n habitaci'#243'n:'
       end
       object Label15: TLabel
-        Left = 152
-        Top = 116
+        Left = 149
+        Top = 107
         Width = 4
         Height = 13
         Font.Charset = ANSI_CHARSET
@@ -4776,15 +4776,15 @@ object Form1: TForm1
         ParentFont = False
       end
       object Label16: TLabel
-        Left = 7
-        Top = 132
+        Left = 4
+        Top = 123
         Width = 153
         Height = 13
         Caption = 'C'#243'digo registro Cliente:'
       end
       object Label17: TLabel
-        Left = 163
-        Top = 132
+        Left = 160
+        Top = 123
         Width = 4
         Height = 13
         Font.Charset = ANSI_CHARSET
@@ -4798,13 +4798,13 @@ object Form1: TForm1
         Left = 1
         Top = 1
         Width = 518
-        Height = 32
+        Height = 23
         Align = alTop
         Caption = 'Registro del conductor'
         Color = clNavy
         Font.Charset = ANSI_CHARSET
         Font.Color = clWhite
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Verdana'
         Font.Style = [fsBold]
         ParentFont = False
@@ -4817,13 +4817,238 @@ object Form1: TForm1
       Width = 520
       Height = 154
       Align = alTop
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWhite
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
-      Font.Style = []
+      Font.Name = 'Verdana'
+      Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 2
+      object Label18: TLabel
+        Left = 5
+        Top = 29
+        Width = 43
+        Height = 13
+        Caption = 'Marca:'
+      end
+      object Label19: TLabel
+        Left = 51
+        Top = 29
+        Width = 12
+        Height = 13
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Verdana'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label20: TLabel
+        Left = 5
+        Top = 46
+        Width = 50
+        Height = 13
+        Caption = 'Modelo:'
+      end
+      object Label21: TLabel
+        Left = 56
+        Top = 46
+        Width = 12
+        Height = 13
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Verdana'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label22: TLabel
+        Left = 5
+        Top = 63
+        Width = 32
+        Height = 13
+        Caption = 'Tipo:'
+      end
+      object Label23: TLabel
+        Left = 40
+        Top = 63
+        Width = 12
+        Height = 13
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Verdana'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label24: TLabel
+        Left = 5
+        Top = 79
+        Width = 30
+        Height = 13
+        Caption = 'A'#241'o:'
+      end
+      object Label25: TLabel
+        Left = 35
+        Top = 79
+        Width = 12
+        Height = 13
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Verdana'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label26: TLabel
+        Left = 5
+        Top = 96
+        Width = 38
+        Height = 13
+        Caption = 'Color:'
+      end
+      object Label27: TLabel
+        Left = 48
+        Top = 96
+        Width = 12
+        Height = 13
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Verdana'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label28: TLabel
+        Left = 200
+        Top = 29
+        Width = 94
+        Height = 13
+        Caption = 'Numero Placa:'
+      end
+      object Label29: TLabel
+        Left = 297
+        Top = 29
+        Width = 12
+        Height = 13
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Verdana'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label30: TLabel
+        Left = 200
+        Top = 46
+        Width = 115
+        Height = 13
+        Caption = 'Serial Carroceria:'
+      end
+      object Label31: TLabel
+        Left = 320
+        Top = 46
+        Width = 12
+        Height = 13
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Verdana'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label32: TLabel
+        Left = 200
+        Top = 63
+        Width = 83
+        Height = 13
+        Caption = 'Serial Motor:'
+      end
+      object Label33: TLabel
+        Left = 288
+        Top = 63
+        Width = 12
+        Height = 13
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Verdana'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label34: TLabel
+        Left = 200
+        Top = 79
+        Width = 50
+        Height = 13
+        Caption = 'Seguro:'
+      end
+      object Label35: TLabel
+        Left = 256
+        Top = 79
+        Width = 12
+        Height = 13
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Verdana'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label36: TLabel
+        Left = 200
+        Top = 96
+        Width = 123
+        Height = 13
+        Caption = 'N'#176' y tipo de Poliza:'
+      end
+      object Label37: TLabel
+        Left = 327
+        Top = 96
+        Width = 12
+        Height = 13
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Verdana'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label38: TLabel
+        Left = 8
+        Top = 119
+        Width = 165
+        Height = 13
+        Caption = 'Codigo Registro Vehiculo:'
+      end
+      object Label39: TLabel
+        Left = 176
+        Top = 119
+        Width = 10
+        Height = 13
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Verdana'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Panel20: TPanel
+        Left = 1
+        Top = 1
+        Width = 518
+        Height = 24
+        Align = alTop
+        Caption = 'Registro del Vehiculo'
+        Color = clNavy
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWhite
+        Font.Height = -11
+        Font.Name = 'Verdana'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 0
+      end
     end
     object Panel17: TPanel
       Left = 0

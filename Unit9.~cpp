@@ -5,6 +5,7 @@
 
 #include "Unit9.h"
 #include "Unit4.h"
+#include "ctype.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -34,7 +35,7 @@ void __fastcall TForm9::Image2Click(TObject *Sender)
                 MessageDlg("Agregado con Éxito", mtInformation, TMsgDlgButtons() << mbOK, 0);
                 Edit1->Clear();
                 Form9->Close();
-                Form4->tipo();
+                Form4->seguro;
         }else{
                 MessageDlg("No ha ingresado Seguro del Auto", mtInformation, TMsgDlgButtons() << mbOK, 0);
         }
@@ -53,3 +54,9 @@ void __fastcall TForm9::Edit1KeyUp(TObject *Sender, WORD &Key,
         }
 }
 //---------------------------------------------------------------------------
+void __fastcall TForm9::Edit1KeyPress(TObject *Sender, char &Key)
+{
+        Key=toupper(Key);
+}
+//---------------------------------------------------------------------------
+

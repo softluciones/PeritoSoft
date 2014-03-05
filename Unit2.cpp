@@ -269,7 +269,8 @@ void __fastcall TForm2::Image5Click(TObject *Sender)
         Form1->Label7->Caption=Edit1->Text;//cedula conductor
         Form1->Label9->Caption=Edit4->Text;//nombre propietario
         Form1->Label11->Caption=Edit3->Text;//cedula propietario
-        Form1->Label13->Caption=Edit5->Text;//telefono
+
+        Form1->Label13->Caption=codigo[ComboBox1->ItemIndex]+"-"+Edit5->Text;//telefono
         Form1->Label15->Caption=Memo1->Text;//dirección
         Form1->Label17->Caption=Query1->FieldByName("id")->Value;//id
         Edit1->Clear();

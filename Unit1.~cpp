@@ -59,7 +59,7 @@ void __fastcall TForm1::Image1Click(TObject *Sender)
         Form2->ShowModal();
         Form2->ban=0;
         Form2->ban1=0;
-        
+
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm1::Image4Click(TObject *Sender)
@@ -78,11 +78,14 @@ void __fastcall TForm1::Image2Click(TObject *Sender)
         Form4->marca();
         Form4->colores();
         Form4->tipo();
+        Form4->seguro();
         Form4->ShowModal();
        }else{
         MessageDlg("Debes registrar el conductor primero", mtInformation, TMsgDlgButtons() << mbOK, 0);
        }
 }
 //---------------------------------------------------------------------------
+
+
 
 

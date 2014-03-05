@@ -1,6 +1,6 @@
 object Form4: TForm4
-  Left = 400
-  Top = 124
+  Left = 381
+  Top = 137
   BorderStyle = bsNone
   Caption = 'Form4'
   ClientHeight = 376
@@ -14,6 +14,13 @@ object Form4: TForm4
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
+  object Label11: TLabel
+    Left = 224
+    Top = 200
+    Width = 65
+    Height = 17
+    Caption = 'Label11'
+  end
   object Panel1: TPanel
     Left = 0
     Top = 0
@@ -1431,6 +1438,7 @@ object Form4: TForm4
         C8686CDBFC8F9406B2DCE7D8C8686CDBFC8F9406B2DCE7D8C8EC6E6D736E61B3
         7FF5F9BB37607FB381B181C27FD8E575E10735E6F3F5B0F0C305A2307FFFD9}
       Stretch = True
+      OnClick = Image2Click
     end
     object Image3: TImage
       Left = 431
@@ -5624,7 +5632,7 @@ object Form4: TForm4
         Height = 24
         ItemHeight = 16
         TabOrder = 4
-        Text = 'ComboBox5'
+        Text = 'seleccione'
       end
       object Edit1: TEdit
         Left = 168
@@ -5632,6 +5640,7 @@ object Form4: TForm4
         Width = 153
         Height = 24
         TabOrder = 5
+        OnKeyPress = Edit1KeyPress
       end
       object Edit2: TEdit
         Left = 339
@@ -5639,6 +5648,7 @@ object Form4: TForm4
         Width = 145
         Height = 24
         TabOrder = 6
+        OnKeyPress = Edit2KeyPress
       end
       object Edit3: TEdit
         Left = 9
@@ -5646,6 +5656,7 @@ object Form4: TForm4
         Width = 143
         Height = 24
         TabOrder = 7
+        OnKeyPress = Edit3KeyPress
       end
       object Edit4: TEdit
         Left = 166
@@ -5653,6 +5664,7 @@ object Form4: TForm4
         Width = 155
         Height = 24
         TabOrder = 8
+        OnKeyPress = Edit4KeyPress
       end
       object Panel4: TPanel
         Left = 4
@@ -5675,25 +5687,13 @@ object Form4: TForm4
         Width = 153
         Height = 24
         TabOrder = 10
+        OnKeyPress = Edit5KeyPress
       end
     end
   end
   object Query1: TQuery
     DatabaseName = 'base'
     Left = 80
-    Top = 40
-  end
-  object Query2: TQuery
-    Left = 120
-    Top = 40
-  end
-  object Query3: TQuery
-    Left = 152
-    Top = 40
-  end
-  object Query4: TQuery
-    DatabaseName = 'base'
-    Left = 184
     Top = 40
   end
 end

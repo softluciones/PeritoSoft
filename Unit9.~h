@@ -29,6 +29,7 @@ __published:	// IDE-managed Components
         void __fastcall Image2Click(TObject *Sender);
         void __fastcall Edit1KeyUp(TObject *Sender, WORD &Key,
           TShiftState Shift);
+        void __fastcall Edit1KeyPress(TObject *Sender, char &Key);
 private:	// User declarations
 public:		// User declarations
         __fastcall TForm9(TComponent* Owner);

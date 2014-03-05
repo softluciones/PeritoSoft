@@ -2874,10 +2874,12 @@ object Form9: TForm9
       Width = 201
       Height = 26
       TabOrder = 0
+      OnKeyPress = Edit1KeyPress
       OnKeyUp = Edit1KeyUp
     end
   end
   object Query1: TQuery
+    DatabaseName = 'base'
     Left = 88
     Top = 32
   end
