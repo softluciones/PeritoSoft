@@ -2934,7 +2934,6 @@ object Form10: TForm10
       Width = 57
       Height = 26
       TabOrder = 4
-      OnKeyPress = Edit5KeyPress
     end
     object ComboBox1: TComboBox
       Left = 72

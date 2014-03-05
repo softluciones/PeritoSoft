@@ -103,6 +103,7 @@ __published:	// IDE-managed Components
         TLabel *Label37;
         TLabel *Label38;
         TLabel *Label39;
+        TMenuItem *PeritoAvaluador1;
         void __fastcall Image1Click(TObject *Sender);
         void __fastcall Image4Click(TObject *Sender);
         void __fastcall Image2Click(TObject *Sender);
@@ -115,6 +116,7 @@ public:		// User declarations
         int idcambiar[30000],totalcambiar;
         __fastcall TForm1(TComponent* Owner);
 void __fastcall rellenar();
+void __fastcall llamalo();
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TForm1 *Form1;

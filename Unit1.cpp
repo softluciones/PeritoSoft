@@ -7,6 +7,7 @@
 #include "Unit2.h"
 #include "Unit3.h"
 #include "Unit4.h"
+#include "Unit10.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -16,10 +17,26 @@ TForm1 *Form1;
 __fastcall TForm1::TForm1(TComponent* Owner)
         : TForm(Owner)
 {
+
         activado=0;
+
+
         rellenar();
+
 }
 //---------------------------------------------------------------------------
+void __fastcall TForm1::llamalo(){
+        int total=0;
+        Query2->Close();
+        Query2->SQL->Clear();
+        Query2->SQL->Add("select count(*) as total from perito");
+        Query2->Active=true;
+        total=Query2->FieldByName("total")->Value;
+        if(total==0){
+                Form10->ShowModal();
+        }
+
+}
 void __fastcall TForm1::rellenar(){
         Form1->Left=0;
         Form1->Top=0;
@@ -56,14 +73,19 @@ void __fastcall TForm1::rellenar(){
 //--------------Agregar Conductor'-------------------------------------------
 void __fastcall TForm1::Image1Click(TObject *Sender)
 {
+
+        llamalo();
         Form2->ShowModal();
         Form2->ban=0;
         Form2->ban1=0;
+
 
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm1::Image4Click(TObject *Sender)
 {
+       
+
        if(activado==2){
         Form3->ShowModal();
        }else{
@@ -85,6 +107,7 @@ void __fastcall TForm1::Image2Click(TObject *Sender)
        }
 }
 //---------------------------------------------------------------------------
+
 
 
 

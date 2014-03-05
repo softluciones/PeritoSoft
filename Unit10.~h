@@ -36,7 +36,6 @@ __published:	// IDE-managed Components
         void __fastcall Edit2KeyPress(TObject *Sender, char &Key);
         void __fastcall Edit3KeyPress(TObject *Sender, char &Key);
         void __fastcall Edit4KeyPress(TObject *Sender, char &Key);
-        void __fastcall Edit5KeyPress(TObject *Sender, char &Key);
 private:	// User declarations
 public:		// User declarations
         

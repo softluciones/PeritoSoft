@@ -1,9 +1,9 @@
 object Form1: TForm1
-  Left = 525
-  Top = 121
+  Left = 224
+  Top = 107
   AutoScroll = False
   Caption = 'Asociaci'#243'n de Peritos Avaluadores Software'
-  ClientHeight = 636
+  ClientHeight = 634
   ClientWidth = 1232
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
@@ -19,7 +19,7 @@ object Form1: TForm1
     Left = 665
     Top = 0
     Width = 3
-    Height = 636
+    Height = 634
     Cursor = crHSplit
     Align = alRight
   end
@@ -27,7 +27,7 @@ object Form1: TForm1
     Left = 668
     Top = 0
     Width = 564
-    Height = 636
+    Height = 634
     Align = alRight
     Color = clNavy
     Font.Charset = ANSI_CHARSET
@@ -41,20 +41,20 @@ object Form1: TForm1
       Left = 249
       Top = 41
       Width = 3
-      Height = 505
+      Height = 503
       Cursor = crHSplit
     end
     object Splitter4: TSplitter
       Left = 290
       Top = 41
       Width = 3
-      Height = 505
+      Height = 503
       Cursor = crHSplit
       Align = alRight
     end
     object Panel5: TPanel
       Left = 1
-      Top = 546
+      Top = 544
       Width = 562
       Height = 89
       Align = alBottom
@@ -704,7 +704,7 @@ object Form1: TForm1
       Left = 1
       Top = 41
       Width = 248
-      Height = 505
+      Height = 503
       Align = alLeft
       BevelOuter = bvNone
       Color = clMoneyGreen
@@ -733,7 +733,7 @@ object Form1: TForm1
         Left = 0
         Top = 33
         Width = 248
-        Height = 472
+        Height = 470
         Align = alClient
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -750,7 +750,7 @@ object Form1: TForm1
       Left = 293
       Top = 41
       Width = 270
-      Height = 505
+      Height = 503
       Align = alRight
       BevelOuter = bvNone
       Color = clSkyBlue
@@ -778,7 +778,7 @@ object Form1: TForm1
         Left = 0
         Top = 33
         Width = 270
-        Height = 472
+        Height = 470
         Align = alClient
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
@@ -821,7 +821,7 @@ object Form1: TForm1
     Left = 0
     Top = 0
     Width = 145
-    Height = 636
+    Height = 634
     Align = alLeft
     BevelOuter = bvNone
     Color = clNavy
@@ -4075,7 +4075,7 @@ object Form1: TForm1
     Left = 145
     Top = 0
     Width = 520
-    Height = 636
+    Height = 634
     Align = alClient
     AutoSize = True
     BevelOuter = bvNone
@@ -4083,7 +4083,7 @@ object Form1: TForm1
     TabOrder = 2
     object Panel13: TPanel
       Left = 0
-      Top = 570
+      Top = 568
       Width = 520
       Height = 66
       Align = alBottom
@@ -4834,7 +4834,7 @@ object Form1: TForm1
       object Label19: TLabel
         Left = 51
         Top = 29
-        Width = 12
+        Width = 4
         Height = 13
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
@@ -4853,7 +4853,7 @@ object Form1: TForm1
       object Label21: TLabel
         Left = 56
         Top = 46
-        Width = 12
+        Width = 4
         Height = 13
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
@@ -4872,7 +4872,7 @@ object Form1: TForm1
       object Label23: TLabel
         Left = 40
         Top = 63
-        Width = 12
+        Width = 4
         Height = 13
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
@@ -4884,14 +4884,14 @@ object Form1: TForm1
       object Label24: TLabel
         Left = 5
         Top = 79
-        Width = 30
+        Width = 29
         Height = 13
         Caption = 'A'#241'o:'
       end
       object Label25: TLabel
         Left = 35
         Top = 79
-        Width = 12
+        Width = 4
         Height = 13
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
@@ -4910,7 +4910,7 @@ object Form1: TForm1
       object Label27: TLabel
         Left = 48
         Top = 96
-        Width = 12
+        Width = 4
         Height = 13
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
@@ -4929,7 +4929,7 @@ object Form1: TForm1
       object Label29: TLabel
         Left = 297
         Top = 29
-        Width = 12
+        Width = 4
         Height = 13
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
@@ -4948,7 +4948,7 @@ object Form1: TForm1
       object Label31: TLabel
         Left = 320
         Top = 46
-        Width = 12
+        Width = 4
         Height = 13
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
@@ -4967,7 +4967,7 @@ object Form1: TForm1
       object Label33: TLabel
         Left = 288
         Top = 63
-        Width = 12
+        Width = 4
         Height = 13
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
@@ -4986,7 +4986,7 @@ object Form1: TForm1
       object Label35: TLabel
         Left = 256
         Top = 79
-        Width = 12
+        Width = 4
         Height = 13
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
@@ -5005,7 +5005,7 @@ object Form1: TForm1
       object Label37: TLabel
         Left = 327
         Top = 96
-        Width = 12
+        Width = 4
         Height = 13
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
@@ -5024,7 +5024,7 @@ object Form1: TForm1
       object Label39: TLabel
         Left = 176
         Top = 119
-        Width = 10
+        Width = 4
         Height = 13
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
@@ -5063,20 +5063,23 @@ object Form1: TForm1
       Left = 0
       Top = 452
       Width = 520
-      Height = 118
+      Height = 116
       Align = alClient
       Color = clGrayText
       TabOrder = 4
     end
   end
   object MainMenu1: TMainMenu
-    Left = 1080
-    Top = 8
+    Left = 456
+    Top = 40
     object menu11: TMenuItem
       Caption = 'Archivo'
       object NuevaActa1: TMenuItem
         Caption = 'Nueva Acta'
         ShortCut = 16449
+      end
+      object PeritoAvaluador1: TMenuItem
+        Caption = 'Agregar perito'
       end
     end
     object menu21: TMenuItem
@@ -5111,7 +5114,6 @@ object Form1: TForm1
   end
   object Query1: TQuery
     DatabaseName = 'base'
-    DataSource = DataSource1
     Left = 1208
     Top = 8
   end
@@ -5121,6 +5123,7 @@ object Form1: TForm1
     Top = 8
   end
   object Query2: TQuery
+    DatabaseName = 'base'
     Left = 344
     Top = 40
   end

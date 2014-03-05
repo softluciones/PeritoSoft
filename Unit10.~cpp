@@ -77,15 +77,9 @@ void __fastcall TForm10::Edit3KeyPress(TObject *Sender, char &Key)
 
 void __fastcall TForm10::Edit4KeyPress(TObject *Sender, char &Key)
 {
-        if(!isdigit(Key)&&Key!=8){
+        if(!isdigit(Key)){
             Key=NULL;
         }
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TForm10::Edit5KeyPress(TObject *Sender, char &Key)
-{
-        Edit4KeyPress(Sender,Key);
 }
 //---------------------------------------------------------------------------
 
