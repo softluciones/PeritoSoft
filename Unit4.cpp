@@ -113,8 +113,8 @@ void __fastcall TForm4::colores()
         while(!Query1->Eof){
                 Colors=Query1->FieldByName("nombre")->Value;
                 id=Query1->FieldByName("id")->Value;
-                Modelo[COLOR][0]=Colors;
-                Modelo[COLOR][1]=id;
+                Colorete[COLOR][0]=Colors;
+                Colorete[COLOR][1]=id;
                 ComboBox4->Items->Add(Colors);
                 COLOR++;
                 Query1->Next();
@@ -226,7 +226,17 @@ void __fastcall TForm4::Image2Click(TObject *Sender)
                                                                 if(!Edit4->Text.IsEmpty()){
                                                                         if(ComboBox5->ItemIndex!=-1){
                                                                                 if(!Edit5->Text.IsEmpty()){
-
+                                                                                        String q,w,e,r,t,y,u,i,o,p;
+                                                                                        q=Edit2->Text;
+                                                                                        w=Edit3->Text;
+                                                                                        e=Edit5->Text;
+                                                                                        r=Edit1->Text;
+                                                                                        t=Edit4->Text;
+                                                                                        y=Marca[ComboBox1->ItemIndex][1];
+                                                                                        u=Modelo[ComboBox2->ItemIndex][1];
+                                                                                        i=Tipo[ComboBox3->ItemIndex][1];
+                                                                                        o=Colorete[ComboBox4->ItemIndex][1];
+                                                                                        p=Seguro[ComboBox5->ItemIndex][1];
                                                                                         cadena="INSERT INTO vehiculo values(null,";
                                                                                         cadena+="'"+Edit2->Text+"',";
                                                                                         cadena+="'"+Edit3->Text+"',";
