@@ -17,7 +17,7 @@ CREATE  TABLE IF NOT EXISTS `apasoftware`.`conductores` (
   `direccionpropietario` TEXT NOT NULL ,
   `telefono` VARCHAR(45) NOT NULL ,
   PRIMARY KEY (`id`) )
-ENGINE = MyISAM;
+ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -27,7 +27,7 @@ CREATE  TABLE IF NOT EXISTS `apasoftware`.`marca` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `nombre` VARCHAR(45) NOT NULL ,
   PRIMARY KEY (`id`) )
-ENGINE = MyISAM;
+ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -43,7 +43,7 @@ CREATE  TABLE IF NOT EXISTS `apasoftware`.`modelo` (
     REFERENCES `apasoftware`.`marca` (`id` )
     ON DELETE CASCADE
     ON UPDATE CASCADE)
-ENGINE = MyISAM;
+ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -53,7 +53,7 @@ CREATE  TABLE IF NOT EXISTS `apasoftware`.`tipo` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `nombre` VARCHAR(45) NOT NULL ,
   PRIMARY KEY (`id`) )
-ENGINE = MyISAM;
+ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -63,7 +63,7 @@ CREATE  TABLE IF NOT EXISTS `apasoftware`.`color` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `nombre` VARCHAR(45) NOT NULL ,
   PRIMARY KEY (`id`) )
-ENGINE = MyISAM;
+ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -73,7 +73,7 @@ CREATE  TABLE IF NOT EXISTS `apasoftware`.`seguro` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `nombre` VARCHAR(100) NOT NULL ,
   PRIMARY KEY (`id`) )
-ENGINE = MyISAM;
+ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -117,21 +117,22 @@ CREATE  TABLE IF NOT EXISTS `apasoftware`.`vehiculo` (
     REFERENCES `apasoftware`.`seguro` (`id` )
     ON DELETE CASCADE
     ON UPDATE CASCADE)
-ENGINE = MyISAM;
+ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
 -- Table `apasoftware`.`perito`
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `apasoftware`.`perito` (
-  `id` INT NOT NULL ,
+  `id` INT NOT NULL AUTO_INCREMENT ,
   `nombre` VARCHAR(45) NOT NULL ,
   `apellido` VARCHAR(45) NOT NULL ,
   `profesion` VARCHAR(45) NULL ,
   `cedula` VARCHAR(45) NOT NULL ,
   `unidad` VARCHAR(45) NOT NULL ,
+  `codigoperito` VARCHAR(45) NOT NULL ,
   PRIMARY KEY (`id`) )
-ENGINE = MyISAM;
+ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -162,7 +163,7 @@ CREATE  TABLE IF NOT EXISTS `apasoftware`.`accidente` (
     REFERENCES `apasoftware`.`perito` (`id` )
     ON DELETE CASCADE
     ON UPDATE CASCADE)
-ENGINE = MyISAM;
+ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -172,7 +173,7 @@ CREATE  TABLE IF NOT EXISTS `apasoftware`.`tipoautoparte` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `nombre` VARCHAR(45) NOT NULL ,
   PRIMARY KEY (`id`) )
-ENGINE = MyISAM;
+ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -188,7 +189,7 @@ CREATE  TABLE IF NOT EXISTS `apasoftware`.`autopartes` (
     REFERENCES `apasoftware`.`tipoautoparte` (`id` )
     ON DELETE CASCADE
     ON UPDATE CASCADE)
-ENGINE = MyISAM;
+ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -209,7 +210,7 @@ CREATE  TABLE IF NOT EXISTS `apasoftware`.`accidentesautoparte` (
     REFERENCES `apasoftware`.`accidente` (`id` )
     ON DELETE CASCADE
     ON UPDATE CASCADE)
-ENGINE = MyISAM;
+ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -217,6 +218,7 @@ ENGINE = MyISAM;
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `apasoftware`.`avaluo` (
   `id` VARCHAR(45) NOT NULL ,
+  `expediente` VARCHAR(45) NULL ,
   `lugarinspeccion` TEXT NOT NULL ,
   `fecha` DATE NOT NULL ,
   `accidente_id` INT NOT NULL ,
@@ -226,7 +228,7 @@ CREATE  TABLE IF NOT EXISTS `apasoftware`.`avaluo` (
     REFERENCES `apasoftware`.`accidente` (`id` )
     ON DELETE CASCADE
     ON UPDATE CASCADE)
-ENGINE = MyISAM;
+ENGINE = InnoDB;
 
 USE `apasoftware` ;
 

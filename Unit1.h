@@ -17,6 +17,7 @@
 #include <DBTables.hpp>
 #include <DBGrids.hpp>
 #include <Grids.hpp>
+#include <ComCtrls.hpp>
 //---------------------------------------------------------------------------
 class TForm1 : public TForm
 {
@@ -107,6 +108,7 @@ __published:	// IDE-managed Components
         void __fastcall Image1Click(TObject *Sender);
         void __fastcall Image4Click(TObject *Sender);
         void __fastcall Image2Click(TObject *Sender);
+        void __fastcall Image3Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
         String reparar[30000];

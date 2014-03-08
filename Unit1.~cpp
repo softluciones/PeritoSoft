@@ -17,20 +17,26 @@ TForm1 *Form1;
 __fastcall TForm1::TForm1(TComponent* Owner)
         : TForm(Owner)
 {
-        int total=0;
+
         activado=0;
 
+
+        rellenar();
+
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::llamalo(){
+        int total=0;
         Query2->Close();
         Query2->SQL->Clear();
         Query2->SQL->Add("select count(*) as total from perito");
         Query2->Active=true;
         total=Query2->FieldByName("total")->Value;
         if(total==0){
-                Form10->Visible=true;
+                Form10->ShowModal();
         }
-        rellenar();
+
 }
-//---------------------------------------------------------------------------
 void __fastcall TForm1::rellenar(){
         Form1->Left=0;
         Form1->Top=0;
@@ -67,14 +73,20 @@ void __fastcall TForm1::rellenar(){
 //--------------Agregar Conductor'-------------------------------------------
 void __fastcall TForm1::Image1Click(TObject *Sender)
 {
+
+        llamalo();
         Form2->ShowModal();
         Form2->ban=0;
         Form2->ban1=0;
+
 
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm1::Image4Click(TObject *Sender)
 {
+
+
+       llamalo();
        if(activado==2){
         Form3->ShowModal();
        }else{
@@ -85,6 +97,7 @@ void __fastcall TForm1::Image4Click(TObject *Sender)
 
 void __fastcall TForm1::Image2Click(TObject *Sender)
 {
+       llamalo();
        if(activado==1){
         Form4->marca();
         Form4->colores();
@@ -92,12 +105,31 @@ void __fastcall TForm1::Image2Click(TObject *Sender)
         Form4->seguro();
         Form4->ShowModal();
        }else{
-        MessageDlg("Debes registrar el conductor primero", mtInformation, TMsgDlgButtons() << mbOK, 0);
+                if(activado!=1&&activado!=0){
+                        Form4->marca();
+                        Form4->colores();
+                        Form4->tipo();
+                        Form4->seguro();
+                        Form4->ShowModal();
+                }else{
+                        if(activado==0){
+                                MessageDlg("Debes registrar el conductor primero", mtInformation, TMsgDlgButtons() << mbOK, 0);
+                        }
+                }
+
+
        }
 }
 //---------------------------------------------------------------------------
 
 
 
+
+
+void __fastcall TForm1::Image3Click(TObject *Sender)
+{
+        llamalo();
+}
+//---------------------------------------------------------------------------
 
 

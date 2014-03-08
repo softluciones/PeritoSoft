@@ -226,6 +226,7 @@ void __fastcall TForm4::Image2Click(TObject *Sender)
                                                                 if(!Edit4->Text.IsEmpty()){
                                                                         if(ComboBox5->ItemIndex!=-1){
                                                                                 if(!Edit5->Text.IsEmpty()){
+                                                                                        Form1->activado=2;
                                                                                         String q,w,e,r,t,y,u,i,o,p;
                                                                                         q=Edit2->Text;
                                                                                         w=Edit3->Text;

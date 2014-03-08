@@ -1,11 +1,11 @@
 object Form3: TForm3
-  Left = 357
-  Top = 104
+  Left = 399
+  Top = 47
   Align = alCustom
   BorderStyle = bsNone
   Caption = 'Form3'
-  ClientHeight = 486
-  ClientWidth = 547
+  ClientHeight = 601
+  ClientWidth = 538
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,10 +18,10 @@ object Form3: TForm3
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 547
+    Width = 538
     Height = 25
     Align = alTop
-    Caption = 'Registrar acta Avaluo/Accidente'
+    Caption = 'Fecha Acta Avaluo'
     Color = clNavy
     Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
@@ -706,7 +706,7 @@ object Form3: TForm3
   object Panel2: TPanel
     Left = 0
     Top = 25
-    Width = 547
+    Width = 538
     Height = 72
     Align = alTop
     TabOrder = 1
@@ -1433,9 +1433,10 @@ object Form3: TForm3
         C8686CDBFC8F9406B2DCE7D8C8686CDBFC8F9406B2DCE7D8C8EC6E6D736E61B3
         7FF5F9BB37607FB381B181C27FD8E575E10735E6F3F5B0F0C305A2307FFFD9}
       Stretch = True
+      OnClick = Image2Click
     end
     object Image3: TImage
-      Left = 472
+      Left = 463
       Top = 1
       Width = 74
       Height = 70
@@ -2205,7 +2206,7 @@ object Form3: TForm3
       OnClick = Image3Click
     end
     object Image4: TImage
-      Left = 400
+      Left = 391
       Top = 1
       Width = 72
       Height = 70
@@ -2851,5 +2852,426 @@ object Form3: TForm3
         386E762307FFD9}
       Stretch = True
     end
+  end
+  object Panel3: TPanel
+    Left = 0
+    Top = 97
+    Width = 538
+    Height = 504
+    Align = alClient
+    TabOrder = 2
+    object GroupBox1: TGroupBox
+      Left = 1
+      Top = 1
+      Width = 536
+      Height = 502
+      Align = alClient
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Verdana'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+      object Label1: TLabel
+        Left = 3
+        Top = 16
+        Width = 126
+        Height = 18
+        Caption = 'Expediente N'#176
+      end
+      object Label2: TLabel
+        Left = 273
+        Top = 16
+        Width = 114
+        Height = 18
+        Caption = 'Experticia N'#176
+      end
+      object Label3: TLabel
+        Left = 5
+        Top = 128
+        Width = 177
+        Height = 18
+        Caption = 'Lugar de Inspecci'#243'n'
+      end
+      object Label4: TLabel
+        Left = 5
+        Top = 70
+        Width = 216
+        Height = 18
+        Caption = 'Fecha del acta de avaluo'
+      end
+      object Label5: TLabel
+        Left = 5
+        Top = 269
+        Width = 80
+        Height = 18
+        Caption = 'Direcci'#243'n'
+      end
+      object Label6: TLabel
+        Left = 5
+        Top = 387
+        Width = 172
+        Height = 18
+        Caption = 'Fecha del accidente'
+      end
+      object Label7: TLabel
+        Left = 277
+        Top = 387
+        Width = 243
+        Height = 18
+        Caption = 'Hora Aproximada accidente'
+      end
+      object Label10: TLabel
+        Left = 5
+        Top = 440
+        Width = 336
+        Height = 18
+        Caption = 'Valor monetario aproximado en da'#241'os'
+      end
+      object Label8: TLabel
+        Left = 64
+        Top = 96
+        Width = 13
+        Height = 18
+        Caption = '/'
+      end
+      object Label9: TLabel
+        Left = 140
+        Top = 96
+        Width = 11
+        Height = 18
+        Caption = '/'
+      end
+      object Label11: TLabel
+        Left = 64
+        Top = 411
+        Width = 11
+        Height = 18
+        Caption = '/'
+      end
+      object Label12: TLabel
+        Left = 136
+        Top = 412
+        Width = 11
+        Height = 18
+        Caption = '/'
+      end
+      object Label13: TLabel
+        Left = 342
+        Top = 411
+        Width = 6
+        Height = 18
+        Caption = ':'
+      end
+      object Edit1: TEdit
+        Left = 3
+        Top = 40
+        Width = 251
+        Height = 26
+        TabOrder = 0
+        OnKeyPress = Edit1KeyPress
+      end
+      object Edit2: TEdit
+        Left = 273
+        Top = 40
+        Width = 246
+        Height = 26
+        TabOrder = 1
+        OnClick = Edit2Click
+        OnEnter = Edit2Enter
+        OnKeyPress = Edit2KeyPress
+      end
+      object Memo1: TMemo
+        Left = 5
+        Top = 150
+        Width = 522
+        Height = 89
+        TabOrder = 2
+        OnKeyPress = Memo1KeyPress
+      end
+      object Panel4: TPanel
+        Left = 3
+        Top = 243
+        Width = 525
+        Height = 22
+        Caption = 'Acta Accidente'
+        Color = clNavy
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWhite
+        Font.Height = -16
+        Font.Name = 'Verdana'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 3
+      end
+      object Memo2: TMemo
+        Left = 5
+        Top = 293
+        Width = 521
+        Height = 89
+        TabOrder = 4
+        OnKeyPress = Memo2KeyPress
+      end
+      object Edit3: TEdit
+        Left = 5
+        Top = 461
+        Width = 339
+        Height = 26
+        TabOrder = 5
+        OnKeyPress = Edit3KeyPress
+      end
+      object ComboBox1: TComboBox
+        Left = 5
+        Top = 93
+        Width = 60
+        Height = 26
+        ItemHeight = 18
+        TabOrder = 6
+        Text = 'Dia'
+        Items.Strings = (
+          '01'
+          '02'
+          '03'
+          '04'
+          '05'
+          '06'
+          '07'
+          '08'
+          '09'
+          '10'
+          '11'
+          '12'
+          '13'
+          '14'
+          '15'
+          '16'
+          '17'
+          '18'
+          '19'
+          '20'
+          '21'
+          '22'
+          '23'
+          '24'
+          '25'
+          '26'
+          '27'
+          '28'
+          '29'
+          '30'
+          '31')
+      end
+      object ComboBox2: TComboBox
+        Left = 80
+        Top = 93
+        Width = 60
+        Height = 26
+        ItemHeight = 18
+        TabOrder = 7
+        Text = 'Mes'
+        Items.Strings = (
+          'Ene'
+          'Feb'
+          'Mar'
+          'Abr'
+          'May'
+          'Jun'
+          'Jul'
+          'Ago'
+          'Sep'
+          'Oct'
+          'Nov'
+          'Dic')
+      end
+      object Edit4: TEdit
+        Left = 152
+        Top = 93
+        Width = 68
+        Height = 26
+        TabOrder = 8
+        OnKeyPress = Edit4KeyPress
+      end
+      object ComboBox3: TComboBox
+        Left = 5
+        Top = 408
+        Width = 60
+        Height = 26
+        ItemHeight = 18
+        TabOrder = 9
+        Text = 'Dia'
+        Items.Strings = (
+          '01'
+          '02'
+          '03'
+          '04'
+          '05'
+          '06'
+          '07'
+          '08'
+          '09'
+          '10'
+          '11'
+          '12'
+          '13'
+          '14'
+          '15'
+          '16'
+          '17'
+          '18'
+          '19'
+          '20'
+          '21'
+          '22'
+          '23'
+          '24'
+          '25'
+          '26'
+          '27'
+          '28'
+          '29'
+          '30'
+          '31')
+      end
+      object ComboBox4: TComboBox
+        Left = 76
+        Top = 408
+        Width = 60
+        Height = 26
+        ItemHeight = 18
+        TabOrder = 10
+        Text = 'Mes'
+        Items.Strings = (
+          'Ene'
+          'Feb'
+          'Mar'
+          'Abr'
+          'May'
+          'Jun'
+          'Jul'
+          'Ago'
+          'Sep'
+          'Oct'
+          'Nov'
+          'Dic')
+      end
+      object Edit5: TEdit
+        Left = 148
+        Top = 408
+        Width = 68
+        Height = 26
+        TabOrder = 11
+        OnKeyPress = Edit5KeyPress
+      end
+      object ComboBox5: TComboBox
+        Left = 349
+        Top = 408
+        Width = 66
+        Height = 26
+        ItemHeight = 18
+        TabOrder = 12
+        Text = 'Min'
+        Items.Strings = (
+          '00'
+          '01'
+          '02'
+          '03'
+          '04'
+          '05'
+          '06'
+          '07'
+          '08'
+          '09'
+          '10'
+          '11'
+          '12'
+          '13'
+          '14'
+          '15'
+          '16'
+          '17'
+          '18'
+          '19'
+          '20'
+          '21'
+          '22'
+          '23'
+          '24'
+          '25'
+          '26'
+          '27'
+          '28'
+          '29'
+          '30'
+          '31'
+          '32'
+          '33'
+          '34'
+          '35'
+          '36'
+          '37'
+          '38'
+          '39'
+          '40'
+          '41'
+          '42'
+          '43'
+          '44'
+          '45'
+          '46'
+          '47'
+          '48'
+          '49'
+          '50'
+          '51'
+          '52'
+          '53'
+          '54'
+          '55'
+          '56'
+          '57'
+          '58'
+          '59')
+      end
+      object ComboBox6: TComboBox
+        Left = 277
+        Top = 408
+        Width = 66
+        Height = 26
+        ItemHeight = 18
+        TabOrder = 13
+        Text = 'Hora'
+        Items.Strings = (
+          '01'
+          '02'
+          '03'
+          '04'
+          '05'
+          '06'
+          '07'
+          '08'
+          '09'
+          '10'
+          '11'
+          '12')
+      end
+      object ComboBox7: TComboBox
+        Left = 416
+        Top = 408
+        Width = 89
+        Height = 26
+        ItemHeight = 18
+        TabOrder = 14
+        Text = 'AM/PM'
+        Items.Strings = (
+          'AM'
+          'PM')
+      end
+    end
+  end
+  object Query1: TQuery
+    DatabaseName = 'base'
+    Left = 136
+    Top = 32
   end
 end

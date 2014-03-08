@@ -84,10 +84,15 @@ void __fastcall TForm1::Image1Click(TObject *Sender)
 //---------------------------------------------------------------------------
 void __fastcall TForm1::Image4Click(TObject *Sender)
 {
-       
 
-       if(activado==2){
+
+       llamalo();
+       Form3->Edit2Enter(Sender);
         Form3->ShowModal();
+       if(activado==2){
+        Form3->Edit2Enter(Sender);
+        Form3->ShowModal();
+
        }else{
         MessageDlg("Debes registrar el vehiculo primero", mtInformation, TMsgDlgButtons() << mbOK, 0);
        }
@@ -96,6 +101,7 @@ void __fastcall TForm1::Image4Click(TObject *Sender)
 
 void __fastcall TForm1::Image2Click(TObject *Sender)
 {
+       llamalo();
        if(activado==1){
         Form4->marca();
         Form4->colores();
@@ -103,12 +109,26 @@ void __fastcall TForm1::Image2Click(TObject *Sender)
         Form4->seguro();
         Form4->ShowModal();
        }else{
-        MessageDlg("Debes registrar el conductor primero", mtInformation, TMsgDlgButtons() << mbOK, 0);
+                if(activado!=1&&activado!=0){
+                        Form4->marca();
+                        Form4->colores();
+                        Form4->tipo();
+                        Form4->seguro();
+                        Form4->ShowModal();
+                }else{
+                        if(activado==0){
+                                MessageDlg("Debes registrar el conductor primero", mtInformation, TMsgDlgButtons() << mbOK, 0);
+                        }
+                }
+
+
        }
 }
 //---------------------------------------------------------------------------
-
-
-
+void __fastcall TForm1::Image3Click(TObject *Sender)
+{
+        llamalo();
+}
+//---------------------------------------------------------------------------
 
 
