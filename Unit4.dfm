@@ -2878,14 +2878,14 @@ object Form4: TForm4
       TabOrder = 0
       object Label1: TLabel
         Left = 6
-        Top = 78
+        Top = 22
         Width = 128
         Height = 16
         Caption = 'Seleccione marca'
       end
       object Image5: TImage
         Left = 137
-        Top = 77
+        Top = 21
         Width = 17
         Height = 17
         Picture.Data = {
@@ -3427,7 +3427,7 @@ object Form4: TForm4
         Caption = 'Seleccione Tipo'
       end
       object Label4: TLabel
-        Left = 171
+        Left = 8
         Top = 79
         Width = 120
         Height = 16
@@ -3963,10 +3963,10 @@ object Form4: TForm4
         OnClick = Image6Click
       end
       object Label5: TLabel
-        Left = 7
-        Top = 24
+        Left = 168
+        Top = 80
         Width = 99
-        Height = 17
+        Height = 16
         Caption = 'Ingrese Placa'
       end
       object Image7: TImage
@@ -4499,7 +4499,7 @@ object Form4: TForm4
         OnClick = Image7Click
       end
       object Image8: TImage
-        Left = 298
+        Left = 135
         Top = 76
         Width = 17
         Height = 17
@@ -5593,7 +5593,7 @@ object Form4: TForm4
       end
       object ComboBox1: TComboBox
         Left = 8
-        Top = 96
+        Top = 40
         Width = 148
         Height = 24
         ItemHeight = 16
@@ -5618,7 +5618,7 @@ object Form4: TForm4
         TabOrder = 2
       end
       object ComboBox4: TComboBox
-        Left = 169
+        Left = 8
         Top = 96
         Width = 145
         Height = 24
@@ -5635,8 +5635,8 @@ object Form4: TForm4
         Text = 'seleccione'
       end
       object Edit1: TEdit
-        Left = 7
-        Top = 40
+        Left = 168
+        Top = 96
         Width = 153
         Height = 24
         TabOrder = 5

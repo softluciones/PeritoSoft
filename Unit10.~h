@@ -9,8 +9,6 @@
 #include <Forms.hpp>
 #include <ExtCtrls.hpp>
 #include <jpeg.hpp>
-#include <DB.hpp>
-#include <DBTables.hpp>
 //---------------------------------------------------------------------------
 class TForm10 : public TForm
 {
@@ -33,18 +31,11 @@ __published:	// IDE-managed Components
         TEdit *Edit5;
         TComboBox *ComboBox1;
         TImage *Image4;
-        TQuery *Query1;
-        TLabel *Label6;
-        TLabel *Label7;
-        TEdit *Edit6;
         void __fastcall Image4Click(TObject *Sender);
         void __fastcall Edit1KeyPress(TObject *Sender, char &Key);
         void __fastcall Edit2KeyPress(TObject *Sender, char &Key);
         void __fastcall Edit3KeyPress(TObject *Sender, char &Key);
         void __fastcall Edit4KeyPress(TObject *Sender, char &Key);
-        void __fastcall Edit5KeyPress(TObject *Sender, char &Key);
-        void __fastcall Image2Click(TObject *Sender);
-        void __fastcall Edit6KeyPress(TObject *Sender, char &Key);
 private:	// User declarations
 public:		// User declarations
         

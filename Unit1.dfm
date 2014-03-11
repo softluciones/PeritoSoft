@@ -2548,7 +2548,6 @@ object Form1: TForm1
           840C6103B2BCD7AF4DD9C670E0988C1FFFD9}
         Stretch = True
         Transparent = True
-        OnClick = Image3Click
       end
     end
     object Panel12: TPanel

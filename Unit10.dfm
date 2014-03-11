@@ -3,7 +3,7 @@ object Form10: TForm10
   Top = 181
   BorderStyle = bsNone
   Caption = 'Form10'
-  ClientHeight = 438
+  ClientHeight = 382
   ClientWidth = 296
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -14,13 +14,6 @@ object Form10: TForm10
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
-  object Label6: TLabel
-    Left = 128
-    Top = 200
-    Width = 65
-    Height = 49
-    Caption = 'Label6'
-  end
   object Panel1: TPanel
     Left = 0
     Top = 0
@@ -1438,7 +1431,6 @@ object Form10: TForm10
         C8686CDBFC8F9406B2DCE7D8C8686CDBFC8F9406B2DCE7D8C8EC6E6D736E61B3
         7FF5F9BB37607FB381B181C27FD8E575E10735E6F3F5B0F0C305A2307FFFD9}
       Stretch = True
-      OnClick = Image2Click
     end
     object Image3: TImage
       Left = 122
@@ -2860,7 +2852,7 @@ object Form10: TForm10
     Left = 0
     Top = 105
     Width = 296
-    Height = 333
+    Height = 277
     Align = alClient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
@@ -2899,17 +2891,10 @@ object Form10: TForm10
     end
     object Label5: TLabel
       Left = 5
-      Top = 264
+      Top = 208
       Width = 61
       Height = 18
       Caption = 'Unidad'
-    end
-    object Label7: TLabel
-      Left = 5
-      Top = 208
-      Width = 149
-      Height = 18
-      Caption = 'Codigo del Perito'
     end
     object Edit1: TEdit
       Left = 5
@@ -2945,7 +2930,7 @@ object Form10: TForm10
     end
     object Edit5: TEdit
       Left = 5
-      Top = 288
+      Top = 232
       Width = 57
       Height = 26
       TabOrder = 4
@@ -2953,25 +2938,12 @@ object Form10: TForm10
     end
     object ComboBox1: TComboBox
       Left = 72
-      Top = 288
+      Top = 232
       Width = 145
       Height = 26
       ItemHeight = 18
       TabOrder = 5
       Text = 'Estado'
     end
-    object Edit6: TEdit
-      Left = 5
-      Top = 232
-      Width = 275
-      Height = 26
-      TabOrder = 6
-      OnKeyPress = Edit6KeyPress
-    end
-  end
-  object Query1: TQuery
-    DatabaseName = 'base'
-    Left = 88
-    Top = 32
   end
 end
