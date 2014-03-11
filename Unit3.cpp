@@ -68,14 +68,30 @@ void __fastcall TForm3::Image2Click(TObject *Sender)
 {
         if(ComboBox1->ItemIndex!=-1){
                 if(ComboBox2->ItemIndex!=-1){
-                        if(!Edit1->Text.IsEmpty()){
+                        if(!Edit1->Text.IsEmpty()&&Edit1->Text.Length()==4){
                                 if(!ComboBox3->ItemIndex!=-1){
                                         if(!ComboBox4->ItemIndex!=-1){
                                                 if(ComboBox5->ItemIndex!=-1){
                                                         if(!Edit2->Text.IsEmpty()){
+                                                                if(!Memo1->Text.IsEmpty()){
+                                                                        if(!Edit3->Text.IsEmpty()){
+                                                                                if(ComboBox6->ItemIndex!=-1){
+                                                                                        if(ComboBox7->ItemIndex!=1){
 
+                                                                                        }else{
+                                                                                                super("Ingrese Mes del acta");
+                                                                                        }
+                                                                                }else{
+                                                                                        super("Seleccione Hora de ejecución del acta");
+                                                                                }
+                                                                        }else{
+                                                                                super("Ingrese o haga Clic para generar el Numero de Experticia");
+                                                                        }
+                                                                }else{
+                                                                        super("Ingrese Dirección donde fue el accidente");
+                                                                }
                                                         }else{
-                                                            super("Ingrese el monto en daños")
+                                                            super("Ingrese Valor aproximado en Daños")
                                                         }
                                                 }else{
                                                         super("Seleccione si es AM o PM");
@@ -87,7 +103,7 @@ void __fastcall TForm3::Image2Click(TObject *Sender)
                                         super("Seleccione Hora del accidente");
                                 }
                         }else{
-                                super("Ingrese año del accidente");
+                                super("Ingrese año del accidente. Deben aparecer 4 digitos. Ejem: 1950");
                         }
                 }else{
                         super("Seleccione Mes de accidente");
